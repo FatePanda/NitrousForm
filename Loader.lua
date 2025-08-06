@@ -106,9 +106,9 @@ local function GrabGamesList()
 	local List = loadstring(game:HttpGet(GameList))()
 
 	for i,v in List do
+		print(v)
 		if DebugOptions.SpoofGameId == false then
 			if v.Id == game.PlaceId then
-				print("Here")
 				return v.ScriptLink
 			end
 		else
