@@ -128,12 +128,10 @@ else
 end
 
 task.wait(1)
-print(MainScript)
+
 if MainScript ~= nil then
 	StatusText.Text = "Game Found. Loading Script"
-	pcall(function()
-		loadstring(game:HttpGet(MainScript))()
-	end)
+	loadstring(game:HttpGet(MainScript))()
 	task.wait(2)
 
 	_G.ThrobberSpin = false
