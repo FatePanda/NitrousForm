@@ -1,3 +1,4 @@
+print("here")
 local GameList = "https://raw.githubusercontent.com/FatePanda/NitrousForm/refs/heads/main/GamesList.Lua"
 
 local DebugOptions = {
