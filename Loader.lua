@@ -108,6 +108,7 @@ local function GrabGamesList()
 	for i,v in List do
 		if DebugOptions.SpoofGameId == false then
 			if v.Id == game.PlaceId then
+				print("Here")
 				return v.ScriptLink
 			end
 		else
