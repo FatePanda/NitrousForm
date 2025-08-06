@@ -202,12 +202,6 @@ local MainLoopThread = task.spawn(function()
                     v.CanCollide = false
                 end
             end
-        else
-            for i,v in game.Players.LocalPlayer.Character:GetDescendants() do
-                if v:IsA("BasePart") then
-                    v.CanCollide = true
-                end
-            end
         end
 	end
 end)
@@ -402,6 +396,23 @@ local function initui()
 		Description = "NONE";
 		CurrentValue = false;
 		Callback = function(Value)
+            if Value == true then
+                _G.Items = {}
+                for i,v in game.Players.LocalPlayer.Character:GetDescendants() do
+                    if v:IsA("BasePart") then
+                        table.insert(_G.Items, {v, v.CanCollide})
+                    end
+                end
+            else
+                if _G.Items then
+                    for i,v in _G.Items do
+                        if v[1] and v[2] then
+                            v[1].CanCollide = v[2]
+                        end
+                    end
+					_G.Items = nil
+                end
+            end
 			_G.toggles.Noclip = Value
 		end
 	})
