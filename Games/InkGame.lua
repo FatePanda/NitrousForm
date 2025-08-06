@@ -1,6 +1,7 @@
 ScriptUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/FatePanda/NitrousFormUILIB/refs/heads/main/Main.lua"))()
 
 if not ScriptUI then
+    print("NoUi")
     return
 end
 
