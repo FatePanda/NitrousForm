@@ -127,7 +127,7 @@ else
 end
 
 task.wait(1)
-
+print(MainScript)
 if MainScript ~= nil then
 	StatusText.Text = "Game Found. Loading Script"
 	pcall(function()
