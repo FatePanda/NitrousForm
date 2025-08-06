@@ -132,6 +132,7 @@ task.wait(1)
 
 if MainScript ~= nil then
 	StatusText.Text = "Game Found. Loading Script"
+	print(MainScript)
 	loadstring(game:HttpGet(MainScript))()
 	task.wait(2)
 
