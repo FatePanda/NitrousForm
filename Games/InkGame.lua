@@ -248,10 +248,9 @@ function _G.MakeAllTilesSafe()
 			return
 		end
 		local function Create(Ele : Part)
-			Ele.Transparency = 0.5
-			Ele.Size = Vector3.new(10,1,10)
+			Ele.Transparency = 1
+			Ele.Size = Vector3.new(15,1,15)
 			Ele.Anchored = true
-			Ele.Color = Color3.fromRGB(150,0,255)
 		end
 
 		local p = Instance.new("Part", v)
