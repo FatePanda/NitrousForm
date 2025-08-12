@@ -1,8 +1,7 @@
 ScriptUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/FatePanda/NitrousFormUILIB/refs/heads/main/Main.lua"))()
 
 if not ScriptUI then
-    print("NoUi")
-    return
+    return false
 end
 
 _G.toggles = {
@@ -140,8 +139,6 @@ local MainLoopThread = task.spawn(function()
 							else
 								if game.Players:FindFirstChild(v.Name):GetAttribute("IsHunter") then
 									v.Esp.FillColor = _G.toggleValues.SeekerEspC
-								else
-									print("! None Found !")
 								end
 							end
 						end
